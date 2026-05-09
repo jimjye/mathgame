@@ -1,0 +1,29 @@
+# Windows / sync metadata
+desktop.ini
+Thumbs.db
+*.tmp
+~$*
+
+# Sensitive files
+.env
+.env.*
+*.key
+*.pem
+credentials.*
+service-account*.json
+
+# Codex / Claude local state
+.claude/
+
+# Node.js
+node_modules/
+dist/
+build/
+coverage/
+*.log
+package-lock.json
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
