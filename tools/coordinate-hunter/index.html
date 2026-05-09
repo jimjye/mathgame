@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>座標獵人</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hero-panel" aria-labelledby="game-title">
+        <div>
+          <p class="eyebrow">直角座標練習</p>
+          <h1 id="game-title">座標獵人</h1>
+        </div>
+        <div class="scoreboard" aria-label="遊戲狀態">
+          <div>
+            <span>時間</span>
+            <strong id="time-left">60</strong>
+          </div>
+          <div>
+            <span>分數</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span>剩餘</span>
+            <strong id="remaining">10</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="play-area">
+        <div class="board-wrap">
+          <div class="axis-label x-axis">x</div>
+          <div class="axis-label y-axis">y</div>
+          <div id="board" class="board" aria-label="座標平面"></div>
+        </div>
+
+        <aside class="control-panel" aria-label="遊戲控制">
+          <form id="guess-form" class="guess-form">
+            <label for="guess-input">輸入座標</label>
+            <div class="guess-row">
+              <input id="guess-input" name="guess" type="text" inputmode="text" autocomplete="off" placeholder="例如：2,-3">
+              <button type="submit">猜</button>
+            </div>
+          </form>
+
+          <div id="message" class="message" role="status" aria-live="polite">按開始後，找出 10 個隱藏座標。</div>
+
+          <div class="actions">
+            <button id="start-button" type="button">開始</button>
+            <button id="reset-button" type="button">重新開始</button>
+          </div>
+
+          <div class="target-list">
+            <h2>已找到</h2>
+            <ol id="found-list"></ol>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
