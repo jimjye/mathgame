@@ -4,8 +4,8 @@
 
 ## 專案狀態
 
-- 目前階段：已建立第一個工具
-- 工具清單：座標獵人
+- 目前階段：已建立兩個工具，幾A幾B已接上 Firebase/Firestore
+- 工具清單：座標獵人、幾A幾B
 - 工作筆記：`D:\Obsidian\mathgame\工作筆記.md`
 
 ## 建議結構
@@ -22,5 +22,16 @@ tools/
 ## 工具
 
 - [座標獵人](tools/coordinate-hunter/index.html)：60 秒直角座標練習遊戲。
+- [幾A幾B](tools/bulls-and-cows/index.html)：四位數字邏輯推理遊戲，支援玩家代碼與成績記錄。
 
-根目錄的 `index.html` 會直接導向座標獵人，方便之後部署到 GitHub Pages。
+根目錄的 `index.html` 是遊戲清單，方便之後部署到 GitHub Pages。
+
+## Firebase
+
+- Firebase project：`jimjyestudy`
+- Web App：`mathgame`
+- Firestore collection：`bullsAndCowsScores`
+- Auth：匿名登入
+- Rules：`firestore.rules`
+
+本機 Firebase Web config 放在 `tools/bulls-and-cows/firebase-config.js`，此檔案不提交到 Git。

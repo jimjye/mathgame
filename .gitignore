@@ -11,6 +11,7 @@ Thumbs.db
 *.pem
 credentials.*
 service-account*.json
+tools/**/firebase-config.js
 
 # Codex / Claude local state
 .claude/

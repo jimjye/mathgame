@@ -3,10 +3,157 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="0; url=tools/coordinate-hunter/index.html">
     <title>mathgame</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17211c;
+        --muted: #5b6760;
+        --line: #d7ddd8;
+        --paper: #f7f5ed;
+        --surface: #ffffff;
+        --green: #196a48;
+        --amber: #d97706;
+        --blue: #2563eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+      }
+
+      main {
+        width: min(980px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 36px 0;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: end;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.1rem, 6vw, 4.4rem);
+        line-height: 1;
+      }
+
+      p {
+        margin: 8px 0 0;
+        color: var(--muted);
+      }
+
+      .tool-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .tool-card {
+        min-height: 190px;
+        display: grid;
+        align-content: space-between;
+        gap: 24px;
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .tool-card:hover,
+      .tool-card:focus-visible {
+        border-color: var(--blue);
+        outline: 0;
+      }
+
+      .tool-card h2 {
+        margin: 0 0 8px;
+        font-size: 1.45rem;
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tag-row span {
+        border-radius: 999px;
+        padding: 5px 10px;
+        background: #edf1ee;
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .accent-green {
+        border-top: 5px solid var(--green);
+      }
+
+      .accent-amber {
+        border-top: 5px solid var(--amber);
+      }
+
+      @media (max-width: 680px) {
+        header,
+        .tool-grid {
+          grid-template-columns: 1fr;
+        }
+
+        header {
+          display: grid;
+          align-items: start;
+        }
+      }
+    </style>
   </head>
   <body>
-    <p><a href="tools/coordinate-hunter/index.html">開啟座標獵人</a></p>
+    <main>
+      <header>
+        <div>
+          <h1>mathgame</h1>
+          <p>數學課堂遊戲與練習工具</p>
+        </div>
+      </header>
+
+      <section class="tool-grid" aria-label="工具清單">
+        <a class="tool-card accent-green" href="tools/coordinate-hunter/index.html">
+          <div>
+            <h2>座標獵人</h2>
+            <p>60 秒直角座標練習遊戲。</p>
+          </div>
+          <div class="tag-row">
+            <span>座標平面</span>
+            <span>限時挑戰</span>
+          </div>
+        </a>
+
+        <a class="tool-card accent-amber" href="tools/bulls-and-cows/index.html">
+          <div>
+            <h2>幾A幾B</h2>
+            <p>推理四位數字，依照 A/B 提示逐步逼近答案。</p>
+          </div>
+          <div class="tag-row">
+            <span>邏輯推理</span>
+            <span>成績記錄</span>
+          </div>
+        </a>
+      </section>
+    </main>
   </body>
 </html>

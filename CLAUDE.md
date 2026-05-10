@@ -10,14 +10,17 @@
 
 ## 工作桌與三個家
 - 工作資料夾：`D:\SynologyDrive\2026ai_project\mathgame`
-- GitHub repo：尚未建立
+- GitHub repo：`https://github.com/jimjye/mathgame`
 - Obsidian 駕駛艙：`D:\Obsidian\mathgame\工作筆記.md`
-- Firebase 專案：尚未設定
+- Firebase 專案：`jimjyestudy`
+- Firebase Web App：`mathgame`
+- Firestore collection：`bullsAndCowsScores`
 
 ## 工具清單
 之後新增工具時，請同步更新此處。
 
 - `tools/coordinate-hunter/`：座標獵人，60 秒直角座標練習遊戲。
+- `tools/bulls-and-cows/`：幾A幾B，四位數字邏輯推理遊戲，支援玩家代碼、匿名登入與 Firestore 成績記錄。
 
 ## 工作注意事項
 - 學生資料一律去識別化，只用座號與班級代號。

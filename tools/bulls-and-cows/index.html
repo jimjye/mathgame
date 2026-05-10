@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>幾A幾B</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="top-bar" aria-labelledby="game-title">
+        <div>
+          <a class="back-link" href="../../index.html">返回遊戲清單</a>
+          <p class="eyebrow">四位數字邏輯遊戲</p>
+          <h1 id="game-title">幾A幾B</h1>
+        </div>
+        <div class="status-grid" aria-label="本局狀態">
+          <div>
+            <span>次數</span>
+            <strong id="attempt-count">0</strong>
+          </div>
+          <div>
+            <span>時間</span>
+            <strong id="elapsed-time">00:00</strong>
+          </div>
+          <div>
+            <span>玩家</span>
+            <strong id="player-code">未登入</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="play-layout">
+        <section class="game-panel" aria-label="猜數字">
+          <div class="secret-strip" aria-hidden="true">
+            <span>?</span>
+            <span>?</span>
+            <span>?</span>
+            <span>?</span>
+          </div>
+
+          <form id="guess-form" class="guess-form">
+            <label for="guess-input">輸入四位不重複數字</label>
+            <div class="guess-row">
+              <input id="guess-input" name="guess" type="text" inputmode="numeric" autocomplete="off" maxlength="4" placeholder="例如：5274" disabled>
+              <button id="guess-button" type="submit" disabled>送出</button>
+            </div>
+          </form>
+
+          <div id="message" class="message" role="status" aria-live="polite">先產生玩家代碼，再開始遊戲。</div>
+
+          <div class="actions">
+            <button id="login-button" type="button" class="secondary">產生玩家代碼</button>
+            <button id="start-button" type="button">開始新局</button>
+            <button id="reveal-button" type="button" class="secondary" disabled>公布答案</button>
+          </div>
+
+          <div class="rule-strip" aria-label="規則摘要">
+            <span>A：數字正確且位置正確</span>
+            <span>B：數字正確但位置不同</span>
+          </div>
+        </section>
+
+        <aside class="record-panel" aria-label="紀錄">
+          <section>
+            <div class="section-title">
+              <h2>本局紀錄</h2>
+              <span id="answer-state">未開始</span>
+            </div>
+            <ol id="history-list" class="history-list"></ol>
+          </section>
+
+          <section>
+            <div class="section-title">
+              <h2>成績表</h2>
+              <span id="store-state">本機記錄</span>
+            </div>
+            <ol id="score-list" class="score-list"></ol>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
