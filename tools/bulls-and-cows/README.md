@@ -7,11 +7,11 @@
 
 ## 成績記錄
 
-預設使用瀏覽器本機記錄。若要接 Firestore：
+GitHub Pages 使用 `firebase-config.public.js` 連到 Firestore。若要在本機改接其他 Firebase 專案：
 
 1. 建立 Firebase Web App。
 2. 將 `firebase-config.example.js` 複製成 `firebase-config.js`。
-3. 填入 Firebase config。
+3. 填入另一組 Firebase config。
 4. 在 Firestore 建立可寫入的 `bullsAndCowsScores` collection 規則。
 
 `firebase-config.js` 已被 `.gitignore` 排除，不會提交到 repo。

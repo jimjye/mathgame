@@ -1,5 +1,6 @@
-// Copy this file to firebase-config.js and fill in your Firebase web app config.
-// firebase-config.js is ignored by Git so keys and project settings stay local.
+// Copy this file to firebase-config.js only when you need a local override.
+// GitHub Pages uses firebase-config.public.js.
+// firebase-config.js is ignored by Git.
 window.MATHGAME_FIREBASE_CONFIG = {
   apiKey: "YOUR_API_KEY",
   authDomain: "YOUR_PROJECT.firebaseapp.com",

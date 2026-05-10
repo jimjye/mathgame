@@ -69,9 +69,15 @@ function createLocalStore() {
 
 export async function createScoreStore() {
   try {
+    await import("./firebase-config.public.js");
+  } catch {
+    // Public config is expected on GitHub Pages. Missing file means local score storage.
+  }
+
+  try {
+    // Optional local override. This file is ignored by Git.
     await import("./firebase-config.js");
   } catch {
-    // Optional local-only config file. Missing file means local score storage.
   }
 
   const config = window.MATHGAME_FIREBASE_CONFIG;

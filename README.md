@@ -34,4 +34,4 @@ tools/
 - Auth：匿名登入
 - Rules：`firestore.rules`
 
-本機 Firebase Web config 放在 `tools/bulls-and-cows/firebase-config.js`，此檔案不提交到 Git。
+GitHub Pages 使用 `tools/bulls-and-cows/firebase-config.public.js` 連線。若需要本機覆蓋設定，可建立 `tools/bulls-and-cows/firebase-config.js`；此檔案不提交到 Git。
